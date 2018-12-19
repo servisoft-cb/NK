@@ -1,0 +1,383 @@
+object fProjecaoEst: TfProjecaoEst
+  Left = 4
+  Top = 77
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Projeção do Estoque'
+  ClientHeight = 448
+  ClientWidth = 774
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RxLabel1: TRxLabel
+    Left = 1
+    Top = 23
+    Width = 123
+    Height = 16
+    Caption = 'Ano da Projeção:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object StaticText1: TStaticText
+    Left = 269
+    Top = 1
+    Width = 243
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    BorderStyle = sbsSunken
+    Caption = 'Referência'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+  end
+  object RxDBLookupCombo1: TRxDBLookupCombo
+    Left = 269
+    Top = 19
+    Width = 243
+    Height = 21
+    DropDownCount = 8
+    ListStyle = lsDelimited
+    LookupField = 'Codigo'
+    LookupDisplay = 'Referencia;DescMaterial'
+    LookupSource = DM1.dsProduto
+    TabOrder = 2
+  end
+  object BitBtn5: TBitBtn
+    Left = 514
+    Top = 14
+    Width = 77
+    Height = 26
+    Hint = 'Confirma/Consulta a projeção deste produto'
+    Caption = '&Confirmar'
+    Enabled = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    OnClick = BitBtn5Click
+    Glyph.Data = {
+      CE070000424DCE07000000000000360000002800000024000000120000000100
+      18000000000098070000CE0E0000D80E00000000000000000000008080008080
+      0080800080800080800080800080800080800080800080800080800080800080
+      8000808000808000808000808000808000808000808000808000808000808000
+      8080008080008080008080008080008080008080008080008080008080008080
+      0080800080800080800080800080800080800080800080800080800080800080
+      8000808000808000808000808000808000808000808000808000808000808000
+      8080008080008080008080008080FFFFFF008080008080008080008080008080
+      0080800080800080800080800080800080800080800080800080800080800080
+      8080000080000000808000808000808000808000808000808000808000808000
+      8080008080008080008080008080008080008080008080808080808080FFFFFF
+      FFFFFF0080800080800080800080800080800080800080800080800080800080
+      8000808000808000808080000000800000800080000000808000808000808000
+      8080008080008080008080008080008080008080008080008080008080008080
+      808080808080808080808080FFFFFFFFFFFF0080800080800080800080800080
+      8000808000808000808000808000808000808080000000800000800000800000
+      8000800000008080008080008080008080008080008080008080008080008080
+      008080008080008080808080808080808080808080808080808080FFFFFFFFFF
+      FF00808000808000808000808000808000808000808000808000808080000000
+      8000008000008000008000008000008000800000008080008080008080008080
+      0080800080800080800080800080800080808080808080808080808080808080
+      80808080808080808080808080FFFFFF00808000808000808000808000808000
+      808000808080000000800000800000800000FF00008000008000008000008000
+      8000000080800080800080800080800080800080800080800080808080808080
+      80808080808080FFFFFF808080808080808080808080808080FFFFFF00808000
+      808000808000808000808000808000808000800000800000800000FF00008080
+      00FF000080000080000080008000000080800080800080800080800080800080
+      80008080008080808080808080808080FFFFFF008080FFFFFF80808080808080
+      8080808080FFFFFFFFFFFF00808000808000808000808000808000808000FF00
+      00800000FF0000808000808000808000FF000080000080000080008000000080
+      80008080008080008080008080008080008080808080808080FFFFFF00808000
+      8080008080FFFFFF808080808080808080808080FFFFFFFFFFFF008080008080
+      00808000808000808000808000FF0000808000808000808000808000808000FF
+      0000800000800000800080000000808000808000808000808000808000808000
+      8080FFFFFF008080008080008080008080008080FFFFFF808080808080808080
+      808080FFFFFFFFFFFF0080800080800080800080800080800080800080800080
+      8000808000808000808000808000FF0000800000800000800080000000808000
+      8080008080008080008080008080008080008080008080008080008080008080
+      008080FFFFFF808080808080808080808080FFFFFFFFFFFF0080800080800080
+      8000808000808000808000808000808000808000808000808000808000FF0000
+      8000008000008000800000008080008080008080008080008080008080008080
+      008080008080008080008080008080008080FFFFFF8080808080808080808080
+      80FFFFFF00808000808000808000808000808000808000808000808000808000
+      808000808000808000808000FF00008000008000008000800000008080008080
+      0080800080800080800080800080800080800080800080800080800080800080
+      80FFFFFF808080808080808080808080FFFFFF00808000808000808000808000
+      808000808000808000808000808000808000808000808000808000FF00008000
+      0080000080008000000080800080800080800080800080800080800080800080
+      80008080008080008080008080008080FFFFFF808080808080808080808080FF
+      FFFF008080008080008080008080008080008080008080008080008080008080
+      00808000808000808000FF000080000080008000000080800080800080800080
+      80008080008080008080008080008080008080008080008080008080008080FF
+      FFFF808080808080808080008080008080008080008080008080008080008080
+      00808000808000808000808000808000808000808000808000FF000080000080
+      0000808000808000808000808000808000808000808000808000808000808000
+      8080008080008080008080008080FFFFFF808080808080008080008080008080
+      0080800080800080800080800080800080800080800080800080800080800080
+      8000808000808000FF0000808000808000808000808000808000808000808000
+      8080008080008080008080008080008080008080008080008080008080FFFFFF
+      0080800080800080800080800080800080800080800080800080800080800080
+      8000808000808000808000808000808000808000808000808000808000808000
+      8080008080008080008080008080008080008080008080008080008080008080
+      008080008080008080008080008080008080}
+    NumGlyphs = 2
+  end
+  object CurrencyEdit1: TCurrencyEdit
+    Left = 125
+    Top = 18
+    Width = 55
+    Height = 21
+    AutoSize = False
+    Color = clAqua
+    DecimalPlaces = 0
+    DisplayFormat = '0'
+    MaxLength = 4
+    TabOrder = 0
+  end
+  object RxDBGrid1: TRxDBGrid
+    Left = 0
+    Top = 48
+    Width = 772
+    Height = 399
+    DataSource = DM1.dsProjecaoEst
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnKeyDown = RxDBGrid1KeyDown
+    Columns = <
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'Ano'
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Width = 36
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'lkReferencia'
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Caption = 'Referência'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'lkNomeProduto'
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Caption = 'Nome do Produto'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao1'
+        Title.Alignment = taCenter
+        Title.Caption = 'Janeiro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao2'
+        Title.Alignment = taCenter
+        Title.Caption = 'Fevereiro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao3'
+        Title.Alignment = taCenter
+        Title.Caption = 'Março'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao4'
+        Title.Alignment = taCenter
+        Title.Caption = 'Abril'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao5'
+        Title.Alignment = taCenter
+        Title.Caption = 'Maio'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao6'
+        Title.Alignment = taCenter
+        Title.Caption = 'Junho'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao7'
+        Title.Alignment = taCenter
+        Title.Caption = 'Julho'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao8'
+        Title.Alignment = taCenter
+        Title.Caption = 'Agosto'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao9'
+        Title.Alignment = taCenter
+        Title.Caption = 'Setembro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao10'
+        Title.Alignment = taCenter
+        Title.Caption = 'Outubro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao11'
+        Title.Alignment = taCenter
+        Title.Caption = 'Novembro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Projecao12'
+        Title.Alignment = taCenter
+        Title.Caption = 'Dezembro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'clTotal'
+        Title.Alignment = taCenter
+        Title.Caption = 'Total'
+        Visible = True
+      end>
+  end
+  object BitBtn3: TBitBtn
+    Left = 695
+    Top = 14
+    Width = 77
+    Height = 26
+    Hint = 'Exclui a Referência da projeção'
+    Caption = '&Excluir'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    OnClick = BitBtn3Click
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333000000000
+      3333333777777777F3333330F777777033333337F3F3F3F7F3333330F0808070
+      33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+      33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+      333333F7F7F7F7F7F3F33030F080707030333737F7F7F7F7F7333300F0808070
+      03333377F7F7F7F773333330F080707033333337F7F7F7F7F333333070707070
+      33333337F7F7F7F7FF3333000000000003333377777777777F33330F88877777
+      0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
+      3333333337FFF7F3333333333000003333333333377777333333}
+    NumGlyphs = 2
+  end
+  object BitBtn1: TBitBtn
+    Left = 181
+    Top = 14
+    Width = 86
+    Height = 26
+    Hint = 'Exclui a Referência da projeção'
+    Caption = 'Mostrar Ano'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    OnClick = BitBtn1Click
+    Glyph.Data = {
+      42010000424D4201000000000000760000002800000011000000110000000100
+      040000000000CC00000000000000000000001000000000000000000000000000
+      8000008000000080800080000000800080008080000080808000C0C0C0000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+      88888000000080000000008888888000000080FFFFFFF08888800000000080F8
+      8888F08888000000000080F88888F08880008000000080F88870007800088000
+      000080F8800FFF0000888000000080F807FFFF0708888000000080F70E000F08
+      07888000000080F0EFEFEF0880888000000080F0F0000F088088800000008000
+      EFEFFF0880888000000088870000000807888000000088880088888708888000
+      0000888880088800888880000000888888700078888880000000888888888888
+      888880000000}
+  end
+  object BitBtn2: TBitBtn
+    Left = 615
+    Top = 14
+    Width = 79
+    Height = 26
+    Hint = 'Imprime a projeção'
+    Caption = 'Imprimir'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    OnClick = BitBtn2Click
+    Glyph.Data = {
+      F6000000424DF600000000000000760000002800000010000000100000000100
+      0400000000008000000000000000000000001000000000000000000000000000
+      8000008000000080800080000000800080008080000080808000C0C0C0000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+      88888800000000000888808888888880808800000000000008080888888BBB88
+      0008088888877788080800000000000008800888888888808080800000000008
+      0800880FFFFFFFF080808880F00000F000088880FFFFFFFF088888880F00000F
+      088888880FFFFFFFF08888888000000000888888888888888888}
+  end
+  object RxDBFilter1: TRxDBFilter
+    DataSource = DM1.dsProduto
+    Filter.Strings = (
+      'ProdMat = '#39'P'#39)
+    Left = 352
+    Top = 8
+  end
+  object qEstoque: TQuery
+    DatabaseName = 'Tabelas'
+    SQL.Strings = (
+      'SELECT DISTINCT CodMaterial, Sum(qtd2) Qtd'
+      'FROM dbEstoqueMatMov.DB'
+      'GROUP BY CodMaterial'
+      '                                                  '
+      ' '
+      ' ')
+    Left = 242
+    Top = 320
+    object qEstoqueCodMaterial: TIntegerField
+      FieldName = 'CodMaterial'
+    end
+    object qEstoqueQtd: TFloatField
+      FieldName = 'Qtd'
+    end
+  end
+end
