@@ -25,11 +25,8 @@ type
     qEstoqueEstMaximo: TFloatField;
     Panel2: TPanel;
     Label2: TLabel;
-    ALed1: TALed;
     Label32: TLabel;
-    ALed4: TALed;
     Label34: TLabel;
-    ALed2: TALed;
     Label3: TLabel;
     Panel3: TPanel;
     BitBtn6: TBitBtn;
@@ -61,6 +58,9 @@ type
     qTalaoQtdPares: TFloatField;
     qTalaoCodCor: TIntegerField;
     qTalaoQtdProduzida: TFloatField;
+    Shape1: TShape;
+    Shape2: TShape;
+    Shape3: TShape;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure VDBGrid1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -139,8 +139,8 @@ begin
     RadioGroup5.ItemIndex := 0;
 
   //Foi trocado para usar o talão no dia 18/10/2013 conforme o Guilherme
-  //Monta_qPedido;
-  Monta_qTalao;
+  Monta_qPedido;
+  //Monta_qTalao;
 
   qEstoque.Close;
   qEstoque.SQL.Clear;
@@ -210,10 +210,10 @@ begin
   if RadioGroup5.ItemIndex > 0 then
   begin
     //Foi trocado para usar o talão no dia 18/10/2013 conforme o Guilherme
-    //if qPedido.Locate('CodProduto;CodCor',VarArrayOf([qEstoqueCodMaterial.AsInteger,qEstoqueCodCor.AsInteger]),[locaseinsensitive]) then
-      //qEstoqueclQtdPedido.AsInteger := qPedidoQtdPares.AsInteger;
-    if qTalao.Locate('CodProduto;CodCor',VarArrayOf([qEstoqueCodMaterial.AsInteger,qEstoqueCodCor.AsInteger]),[locaseinsensitive]) then
-      qEstoqueclQtdPedido.AsInteger := qTalaoQtdPares.AsInteger - qTalaoQtdProduzida.AsInteger;
+    if qPedido.Locate('CodProduto;CodCor',VarArrayOf([qEstoqueCodMaterial.AsInteger,qEstoqueCodCor.AsInteger]),[locaseinsensitive]) then
+      qEstoqueclQtdPedido.AsInteger := qPedidoQtdPares.AsInteger;
+    //if qTalao.Locate('CodProduto;CodCor',VarArrayOf([qEstoqueCodMaterial.AsInteger,qEstoqueCodCor.AsInteger]),[locaseinsensitive]) then
+    //  qEstoqueclQtdPedido.AsInteger := qTalaoQtdPares.AsInteger - qTalaoQtdProduzida.AsInteger;
   end;
 end;
 

@@ -1,6 +1,6 @@
 object fConsEstoqueMat: TfConsEstoqueMat
-  Left = 145
-  Top = 83
+  Left = 96
+  Top = 136
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Consulta de Estoque'
@@ -182,26 +182,12 @@ object fConsEstoqueMat: TfConsEstoqueMat
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object ALed1: TALed
-        Left = 793
-        Top = 50
-        Width = 16
-        Height = 16
-        FalseColor = clRed
-      end
       object Label32: TLabel
         Left = 813
         Top = 53
         Width = 73
         Height = 13
         Caption = 'Saldo Negativo'
-      end
-      object ALed4: TALed
-        Left = 793
-        Top = 68
-        Width = 16
-        Height = 16
-        FalseColor = clYellow
       end
       object Label34: TLabel
         Left = 813
@@ -210,19 +196,33 @@ object fConsEstoqueMat: TfConsEstoqueMat
         Height = 13
         Caption = 'Saldo Abaixo do M'#237'nimo'
       end
-      object ALed2: TALed
-        Left = 793
-        Top = 86
-        Width = 16
-        Height = 16
-        FalseColor = clAqua
-      end
       object Label3: TLabel
         Left = 813
         Top = 89
         Width = 113
         Height = 13
         Caption = 'Saldo Acima do M'#225'ximo'
+      end
+      object Shape1: TShape
+        Left = 780
+        Top = 49
+        Width = 30
+        Height = 16
+        Brush.Color = clRed
+      end
+      object Shape2: TShape
+        Left = 780
+        Top = 67
+        Width = 30
+        Height = 16
+        Brush.Color = clYellow
+      end
+      object Shape3: TShape
+        Left = 780
+        Top = 86
+        Width = 30
+        Height = 16
+        Brush.Color = clAqua
       end
       object Panel3: TPanel
         Left = 428
