@@ -456,7 +456,7 @@ type
 
 var
   fMenuP: TfMenuP;
-  Auto : String[15];
+  Autos: String[15];
 
 implementation
 
@@ -465,17 +465,13 @@ uses UGrupos, UFornecedores, UMaterial, UGrade, UCor, UCondPgto,
   UPrevMaterial, UVendedor, UNatOperacao, UPedido, UCliente,
   UPrevRelClientes, URelFornecedores, UPrevFornecedores, UPrevVendedores,
   USetor, UTipoCobranca, UHistorico, UEmissaoNotaFiscal, UUf, UContas,
-  UPlanoContas, UPrevContas, 
-  ULancaCPagar, ULancaCReceber, UNotaEntrada, USobre,
+  UPlanoContas, UPrevContas, ULancaCPagar, ULancaCReceber, UNotaEntrada, USobre,
   UPrevDuplicatas, UPrevRelRotulos, UImpressora, URelClientes,
-  UJuros, URegioes, USenha, UParametros,
-  UPrevPedidosNaoFat, UBaixaPedido, UEtiqCliente, UEtiqVendedor,
-  UDM1, UAutorizacao, ULancComissao, UPrevExtComissao2,
-  UPrevRelCPagar, UPrevNComprasNatOpe, UPrevRelCReceber, UPrevRecCli,
-  UPrevPagForn, UPrevPgtoJuros, UEtiqFornecedor, UObsAux, UUsuarios, UAcesso,
-  UAtividade, UIndexador, UConsFornecAtiv,
-  UPrevCustoSetor, UPrevMatMinimo, UConsEstoqueMat, UPrevRelHistMaterial,
-  UPrevNotaEntrada,
+  UJuros, URegioes, USenha, UParametros, UPrevPedidosNaoFat, UBaixaPedido, UEtiqCliente,
+  UEtiqVendedor, UDM1, UAutorizacao, ULancComissao, UPrevExtComissao2, UPrevRelCPagar,
+  UPrevNComprasNatOpe, UPrevRelCReceber, UPrevRecCli, UPrevPagForn, UPrevPgtoJuros,
+  UEtiqFornecedor, UObsAux, UUsuarios, UAcesso, UAtividade, UIndexador, UConsFornecAtiv,
+  UPrevCustoSetor, UPrevMatMinimo, UConsEstoqueMat, UPrevRelHistMaterial, UPrevNotaEntrada,
   UPrevCalcMaterialLote, UCidade, UDctoEst, UAgendaTelef, UCopiaDuplicata,
   UPrevBalancoEst, UPrevRelOC, UFuncionario, UPrevEmbDiario, UConsComissao,
   UPrevProgramacao, UTabPreco, UPrevContrFat, UAgeContato, UHistPedido,
